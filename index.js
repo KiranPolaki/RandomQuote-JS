@@ -7,9 +7,8 @@ const btn = document.getElementById("btn");
 async function getQuote() {
   const response = await fetch(url);
   const data = await response.json();
-  if (response.ok) {
-    console.log(data);
-  }
+  quote.innerText = data.content;
+  author.innerHTML = data.author;
 }
 
 window.addEventListener("load", getQuote);
