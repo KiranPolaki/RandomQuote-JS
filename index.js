@@ -13,3 +13,9 @@ async function getQuote() {
 
 window.addEventListener("load", getQuote);
 btn.addEventListener("click", getQuote);
+window.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    // event.preventDefault();
+    btn.click();
+  }
+});
